@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Gift Card - Limited Time Offers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Popup Overlay -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>🎉 Claim Your Free Gift Card!</h2>
+                <p>Limited time offer - Fill in your details to get started</p>
+            </div>
+            <form id="claimForm" class="claim-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="IT">Italy</option>
+                        <option value="ES">Spain</option>
+                        <option value="JP">Japan</option>
+                        <option value="IN">India</option>
+                        <option value="BR">Brazil</option>
+                        <option value="MX">Mexico</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">I agree to the terms and conditions and privacy policy</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit Claim</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Section 1: Hero -->
+        <section class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="main-title">🎁 FREE GIFT CARD</h1>
+                    <h2 class="sub-title">Limited Time Offers - Claim Now!</h2>
+                    <p class="hero-description">Get your free gift cards from top brands. No purchase required!</p>
+                    <button class="main-btn" onclick="showPopup()">Claim Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Amazon Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Amazon Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Amazon $50" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Amazon $50</div>
+                        </div>
+                        <h3>$50 Amazon Gift Card</h3>
+                        <p>Shop millions of products</p>
+                        <button class="card-btn" onclick="showPopup()">Get Free Card</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Amazon $100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Amazon $100</div>
+                        </div>
+                        <h3>$100 Amazon Gift Card</h3>
+                        <p>Premium shopping experience</p>
+                        <button class="card-btn" onclick="showPopup()">Apply Here</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Walmart Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Walmart Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Walmart $25" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Walmart $25</div>
+                        </div>
+                        <h3>$25 Walmart Gift Card</h3>
+                        <p>Everyday low prices</p>
+                        <button class="card-btn" onclick="showPopup()">Claim Now</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Walmart $75" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Walmart $75</div>
+                        </div>
+                        <h3>$75 Walmart Gift Card</h3>
+                        <p>Save on groceries & more</p>
+                        <button class="card-btn" onclick="showPopup()">Get Free Card</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Target Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Target Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Target $30" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Target $30</div>
+                        </div>
+                        <h3>$30 Target Gift Card</h3>
+                        <p>Expect more, pay less</p>
+                        <button class="card-btn" onclick="showPopup()">Apply Here</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Target $60" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Target $60</div>
+                        </div>
+                        <h3>$60 Target Gift Card</h3>
+                        <p>Style savings for everyone</p>
+                        <button class="card-btn" onclick="showPopup()">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Starbucks Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Starbucks Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Starbucks $15" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Starbucks $15</div>
+                        </div>
+                        <h3>$15 Starbucks Gift Card</h3>
+                        <p>Your daily coffee fix</p>
+                        <button class="card-btn" onclick="showPopup()">Get Free Card</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Starbucks $50" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Starbucks $50</div>
+                        </div>
+                        <h3>$50 Starbucks Gift Card</h3>
+                        <p>Premium coffee experience</p>
+                        <button class="card-btn" onclick="showPopup()">Apply Here</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Best Buy Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Best Buy Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Best Buy $40" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Best Buy $40</div>
+                        </div>
+                        <h3>$40 Best Buy Gift Card</h3>
+                        <p>Latest tech gadgets</p>
+                        <button class="card-btn" onclick="showPopup()">Claim Now</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Best Buy $100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Best Buy $100</div>
+                        </div>
+                        <h3>$100 Best Buy Gift Card</h3>
+                        <p>Premium electronics</p>
+                        <button class="card-btn" onclick="showPopup()">Get Free Card</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Netflix Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Netflix Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Netflix $25" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Netflix $25</div>
+                        </div>
+                        <h3>$25 Netflix Gift Card</h3>
+                        <p>Stream unlimited movies</p>
+                        <button class="card-btn" onclick="showPopup()">Apply Here</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Netflix $50" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Netflix $50</div>
+                        </div>
+                        <h3>$50 Netflix Gift Card</h3>
+                        <p>Premium entertainment</p>
+                        <button class="card-btn" onclick="showPopup()">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: PlayStation Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">PlayStation Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="PlayStation $20" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">PlayStation $20</div>
+                        </div>
+                        <h3>$20 PlayStation Gift Card</h3>
+                        <p>Gaming adventures await</p>
+                        <button class="card-btn" onclick="showPopup()">Get Free Card</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="PlayStation $60" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">PlayStation $60</div>
+                        </div>
+                        <h3>$60 PlayStation Gift Card</h3>
+                        <p>Ultimate gaming experience</p>
+                        <button class="card-btn" onclick="showPopup()">Apply Here</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Spotify Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">Spotify Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Spotify $30" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Spotify $30</div>
+                        </div>
+                        <h3>$30 Spotify Gift Card</h3>
+                        <p>Music for every moment</p>
+                        <button class="card-btn" onclick="showPopup()">Claim Now</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="Spotify $60" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">Spotify $60</div>
+                        </div>
+                        <h3>$60 Spotify Gift Card</h3>
+                        <p>Premium music streaming</p>
+                        <button class="card-btn" onclick="showPopup()">Get Free Card</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: iTunes Gift Cards -->
+        <section class="section gift-section">
+            <div class="container">
+                <h2 class="section-title">iTunes Gift Cards</h2>
+                <div class="image-cards">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="iTunes $25" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">iTunes $25</div>
+                        </div>
+                        <h3>$25 iTunes Gift Card</h3>
+                        <p>Apps, music & more</p>
+                        <button class="card-btn" onclick="showPopup()">Apply Here</button>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            <img src="images/31x451MtRuL.jpg" alt="iTunes $100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-text">iTunes $100</div>
+                        </div>
+                        <h3>$100 iTunes Gift Card</h3>
+                        <p>Ultimate entertainment</p>
+                        <button class="card-btn" onclick="showPopup()">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>About Free Gift Cards</h4>
+                        <p>Your #1 destination for free gift cards from top brands. No purchase required!</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Popular Stores</h4>
+                        <ul>
+                            <li>Amazon</li>
+                            <li>Walmart</li>
+                            <li>Target</li>
+                            <li>Best Buy</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#terms">Terms & Conditions</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Free Gift Cards. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
